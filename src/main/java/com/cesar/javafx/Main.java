@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main extends Application {
@@ -61,9 +62,12 @@ public class Main extends Application {
             selectSquare(mouseTableroCoord, Color.PINK);
             if (tablero.getTablero2d()[mouseCoords.getFirst().getY()][mouseCoords.getFirst().getX()] != null){
                 if(tablero.getTablero2d()[mouseCoords.getFirst().getY()][mouseCoords.getFirst().getX()].isBando() == tablero.jugadorActivo){
+                    Pieza[][] tablerobefore = tablero.getTablero2d();
                     tablero.move(mouseCoords.getFirst().getY(), mouseCoords.getFirst().getX(), mouseCoords.get(1).getY(), mouseCoords.get(1).getX(), false);
                     actualizarTablero();
-                    selectSquare(mouseTableroCoord, Color.LIGHTGREEN);
+                    if (!Arrays.deepEquals(tablerobefore, tablero.getTablero2d())){
+                        selectSquare(mouseTableroCoord, Color.LIGHTGREEN);
+                    }
                 }
             }
             mouseCoords.clear();

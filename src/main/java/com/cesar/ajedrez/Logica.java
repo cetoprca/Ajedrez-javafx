@@ -32,8 +32,8 @@ public class Logica{
             if (tablero2d[Opos[0]+(i*constante)][Opos[1]].isBando() != tablero2d[Opos[0]][Opos[1]].isBando()){
                 int[] Cpos = {Opos[0]+(i*constante), Opos[1]};
                 legalMoves.add(Cpos);
-                break;
             }
+            break;
         }
 
         repeticiones = 0;
@@ -60,8 +60,8 @@ public class Logica{
             if (tablero2d[Opos[0]][Opos[1]+(i*constante)].isBando() != tablero2d[Opos[0]][Opos[1]].isBando()){
                 int[] Cpos = {Opos[0], Opos[1]+(i*constante)};
                 legalMoves.add(Cpos);
-                break;
             }
+            break;
         }
 
         return legalMoves;
@@ -141,8 +141,8 @@ public class Logica{
             if (tablero2d[Opos[0]+(i*constante)][Opos[1]].isBando() != tablero2d[Opos[0]][Opos[1]].isBando()){
                 int[] Cpos = {Opos[0]+(i*constante), Opos[1]};
                 legalMoves.add(Cpos);
-                break;
             }
+            break;
         }
 
         constante = 1;
@@ -165,8 +165,8 @@ public class Logica{
             if (tablero2d[Opos[0]][Opos[1]+(i*constante)].isBando() != tablero2d[Opos[0]][Opos[1]].isBando()){
                 int[] Cpos = {Opos[0], Opos[1]+(i*constante)};
                 legalMoves.add(Cpos);
-                break;
             }
+            break;
         }
 
         return legalMoves;
