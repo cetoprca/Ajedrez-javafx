@@ -14,4 +14,5 @@ module com.cesar.javafx {
 
     opens com.cesar.javafx to javafx.fxml;
     exports com.cesar.javafx;
+    exports com.cesar.ajedrez;
 }
